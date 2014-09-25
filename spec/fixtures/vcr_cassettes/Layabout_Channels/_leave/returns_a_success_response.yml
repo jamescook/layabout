@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://isotope11.slack.com/api/channels.leave?channel=C026K09CS&token=a-totally-legit-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 25 Sep 2014 02:22:54 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Xss-Protection:
+      - '0'
+      Content-Length:
+      - '55'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ok":false,"error":"invalid_auth"}'
+    http_version: 
+  recorded_at: Thu, 25 Sep 2014 02:22:54 GMT
+- request:
+    method: get
+    uri: https://isotope11.slack.com/api/channels.leave?channel=C026K09CS&token=xoxp-2223009426-2222616703-2700726491-4a3e8d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 25 Sep 2014 12:05:00 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - post
+      X-Oauth-Scopes:
+      - identify,read,post,client
+      X-Xss-Protection:
+      - '0'
+      Content-Length:
+      - '31'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ok":true}'
+    http_version: 
+  recorded_at: Thu, 25 Sep 2014 12:05:03 GMT
+recorded_with: VCR 2.9.3
