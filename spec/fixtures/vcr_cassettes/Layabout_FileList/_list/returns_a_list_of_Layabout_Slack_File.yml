@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://isotope11.slack.com/api/files.list?count=1&token=xoxp-2223009426-2222616703-2700726491-4a3e8d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 26 Sep 2014 12:22:16 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - read
+      X-Oauth-Scopes:
+      - identify,read,post,client
+      X-Xss-Protection:
+      - '0'
+      Content-Length:
+      - '600'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ok":true,"files":[{"id":"F02M13E6D","timestamp":1411680242,"name":"Screen
+        Shot 2014-09-25 at 4.22.36 PM.png","title":"Screen Shot 2014-09-25 at 4.22.36
+        PM.png","mimetype":"image\/png","filetype":"png","pretty_type":"PNG","user":"U02K9RJTP","editable":false,"size":792545,"mode":"hosted","is_external":false,"external_type":"","is_public":true,"public_url_shared":false,"url":"https:\/\/slack-files.com\/files-pub\/T026K09CJ-F02M13E6D-5d26b9\/screen_shot_2014-09-25_at_4.22.36_pm.png","url_download":"https:\/\/slack-files.com\/files-pub\/T026K09CJ-F02M13E6D-5d26b9\/download\/screen_shot_2014-09-25_at_4.22.36_pm.png","url_private":"https:\/\/files.slack.com\/files-pri\/T026K09CJ-F02M13E6D\/screen_shot_2014-09-25_at_4.22.36_pm.png","url_private_download":"https:\/\/files.slack.com\/files-pri\/T026K09CJ-F02M13E6D\/download\/screen_shot_2014-09-25_at_4.22.36_pm.png","thumb_64":"https:\/\/slack-files.com\/files-tmb\/T026K09CJ-F02M13E6D-2df154\/screen_shot_2014-09-25_at_4.22.36_pm_64.png","thumb_80":"https:\/\/slack-files.com\/files-tmb\/T026K09CJ-F02M13E6D-2df154\/screen_shot_2014-09-25_at_4.22.36_pm_80.png","thumb_360":"https:\/\/slack-files.com\/files-tmb\/T026K09CJ-F02M13E6D-2df154\/screen_shot_2014-09-25_at_4.22.36_pm_360.png","thumb_360_w":269,"thumb_360_h":360,"image_exif_rotation":1,"permalink":"https:\/\/isotope11.slack.com\/files\/bradleyprice\/F02M13E6D\/screen_shot_2014-09-25_at_4.22.36_pm.png","permalink_public":"https:\/\/slack-files.com\/T026K09CJ-F02M13E6D-5d26b9","channels":["C026K09CQ"],"groups":[],"ims":[],"comments_count":1,"initial_comment":{"id":"Fc02M2CDMA","timestamp":1411680247,"user":"U02K9RJTP","comment":"it''s
+        a western danger zone, starring Clint Eastwood:"}}],"paging":{"count":1,"total":225,"page":1,"pages":225}}'
+    http_version: 
+  recorded_at: Fri, 26 Sep 2014 12:22:16 GMT
+recorded_with: VCR 2.9.3
