@@ -1,5 +1,6 @@
 # Layabout - Slack API Toolbelt
 
+![travis] (https://travis-ci.org/jamescook/layabout.svg)
 
 ### Configuration
 ```
