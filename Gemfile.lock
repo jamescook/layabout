@@ -3,6 +3,7 @@ PATH
   specs:
     layabout (0.0.1)
       httpi (~> 2.1.1)
+      multipart-post (~> 1.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -18,6 +19,7 @@ GEM
       rubyntlm (~> 0.3.2)
     method_source (0.8.2)
     multi_json (1.10.1)
+    multipart-post (1.1.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)

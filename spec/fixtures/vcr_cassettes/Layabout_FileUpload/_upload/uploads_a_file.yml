@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://isotope11.slack.com/api/files.upload
+    body:
+      encoding: UTF-8
+      string: "-------------RubyMultipartPost\r\nContent-Disposition: form-data; name=\"file\";
+        filename=\"Gemfile\"\r\nContent-Length: 12\r\nContent-Type: text/plain\r\nContent-Transfer-Encoding:
+        binary\r\n\r\nHello world\n\r\n-------------RubyMultipartPost\r\nContent-Disposition:
+        form-data; name=\"token\"\r\n\r\nxoxp-2223009426-2222616703-2700726491-4a3e8d\r\n-------------RubyMultipartPost\r\nContent-Disposition:
+        form-data; name=\"channels\"\r\n\r\nC026VKGP7\r\n-------------RubyMultipartPost--\r\n\r\n"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - multipart/form-data; boundary=-----------RubyMultipartPost
+      Content-Length:
+      - '450'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 25 Sep 2014 13:45:42 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - post
+      X-Oauth-Scopes:
+      - identify,read,post,client
+      X-Xss-Protection:
+      - '0'
+      Content-Length:
+      - '489'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ok":true,"file":{"id":"F02LZFDSE","timestamp":1411652742,"name":"Gemfile","title":"Gemfile","mimetype":"text\/plain","filetype":"text","pretty_type":"Plain
+        Text","user":"U026JJ4LP","editable":true,"size":12,"mode":"snippet","is_external":false,"external_type":"","is_public":true,"public_url_shared":false,"url":"https:\/\/slack-files.com\/files-pub\/T026K09CJ-F02LZFDSE-72ef07\/gemfile","url_download":"https:\/\/slack-files.com\/files-pub\/T026K09CJ-F02LZFDSE-72ef07\/download\/gemfile","url_private":"https:\/\/files.slack.com\/files-pri\/T026K09CJ-F02LZFDSE\/gemfile","url_private_download":"https:\/\/files.slack.com\/files-pri\/T026K09CJ-F02LZFDSE\/download\/gemfile","permalink":"https:\/\/isotope11.slack.com\/files\/jamescook\/F02LZFDSE\/gemfile","permalink_public":"https:\/\/slack-files.com\/T026K09CJ-F02LZFDSE-72ef07","edit_link":"https:\/\/isotope11.slack.com\/files\/jamescook\/F02LZFDSE\/gemfile\/edit","preview":"Hello
+        world\n","preview_highlight":"<div class=\"sssh-code\"><div class=\"sssh-line\"><pre>Hello
+        world<\/pre><\/div>\n<div class=\"sssh-line\"><pre><\/pre><\/div>\n<\/div>","lines":2,"lines_more":0,"channels":["C026VKGP7"],"groups":[],"ims":[],"comments_count":0}}'
+    http_version: 
+  recorded_at: Thu, 25 Sep 2014 13:45:42 GMT
+recorded_with: VCR 2.9.3
