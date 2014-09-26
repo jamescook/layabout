@@ -11,4 +11,8 @@ Layabout.configure do |config|
 
 ### Usage
 
-[todo]
+```
+Layabout.say('hello world', '#random')              # Posts a message
+Layabout.upload('/path/to/a/silly.gif', 'C234546')  # You must specify the channel ID ...
+Layabout.channels                                   # Return a list of channels
+```

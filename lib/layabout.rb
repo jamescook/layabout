@@ -1,9 +1,11 @@
 require 'uri'
 require 'httpi'
 require_relative 'layabout/slack_response.rb'
+require_relative 'layabout/helpers'
 
 module Layabout
   extend self
+  extend ::Layabout::Helpers
 
   def self.configure &block
     yield configuration
