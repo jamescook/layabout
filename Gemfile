@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gemspec
 
-group :test, :development do
+group :test do
   gem 'pry'
-  gem 'simplecov'
 end
