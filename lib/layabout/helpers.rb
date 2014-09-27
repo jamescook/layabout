@@ -1,6 +1,7 @@
 require_relative './chat.rb'
 require_relative './channels.rb'
 require_relative './file_upload.rb'
+require_relative './users.rb'
 
 module Layabout
   module Helpers
@@ -24,6 +25,10 @@ module Layabout
     def upload(filepath, channels, options={})
       options = options.dup.merge(filepath: filepath, channels: channels)
       FileUpload.new(options).upload
+    end
+
+    def users
+      Users.new.list
     end
   end
 end

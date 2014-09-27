@@ -32,4 +32,11 @@ describe Layabout, vcr: true do
       expect(Layabout.leave('C026VKGP7')).to be_success
     end
   end
+
+  describe '.users' do
+    it 'returns a list of users' do
+      expect(Layabout.users).to be_an_instance_of(Array)
+      expect(Layabout.users.first).to be_an_instance_of(Layabout::Slack::User)
+    end
+  end
 end
