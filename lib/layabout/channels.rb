@@ -58,6 +58,7 @@ module Layabout
 
     def leave_endpoint(channel_id)
       build_channel_endpoint('leave').tap do |uri|
+        channel_id.sub!('#', '%23')
         uri.query = uri.query + "&channel=#{channel_id}"
       end
     end

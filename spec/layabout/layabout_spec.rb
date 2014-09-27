@@ -26,4 +26,10 @@ describe Layabout, vcr: true do
       expect(Layabout.join('#ruby')).to be_an_instance_of(Layabout::Slack::Channel)
     end
   end
+
+  describe '.leave' do
+    it 'leave the specified channel' do
+      expect(Layabout.leave('C026VKGP7')).to be_success
+    end
+  end
 end
