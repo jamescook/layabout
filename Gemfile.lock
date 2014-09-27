@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    layabout (0.0.1)
+    layabout (0.0.2)
       httpi (~> 2.1.1)
       multipart-post (~> 1.1.0)
 
