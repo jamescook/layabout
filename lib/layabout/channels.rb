@@ -29,7 +29,7 @@ module Layabout
     end
 
     def join(channel_name)
-      SlackResponse.new(HTTPI.get(http_request(join_endpoint(channel_name))))
+      process('channel', SlackResponse.new(HTTPI.get(http_request(join_endpoint(channel_name)))))
     end
 
     private

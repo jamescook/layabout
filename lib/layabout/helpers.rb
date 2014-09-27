@@ -13,6 +13,10 @@ module Layabout
       Channels.new.list
     end
 
+    def join(channel_name)
+      Channels.new.join(channel_name)
+    end
+
     def upload(filepath, channels, options={})
       options = options.dup.merge(filepath: filepath, channels: channels)
       FileUpload.new(options).upload

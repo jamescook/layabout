@@ -20,4 +20,10 @@ describe Layabout, vcr: true do
       expect(Layabout.channels.first).to be_an_instance_of(Layabout::Slack::Channel)
     end
   end
+
+  describe '.join' do
+    it 'joins the specified channel and returns an instance of Channel' do
+      expect(Layabout.join('#ruby')).to be_an_instance_of(Layabout::Slack::Channel)
+    end
+  end
 end

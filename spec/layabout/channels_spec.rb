@@ -16,8 +16,8 @@ describe Layabout::Channels, vcr: true do
   end
 
   describe '#join' do
-    it 'returns a success response' do
-      expect(subject.join('#ruby')).to be_success
+    it 'returns a Layabout::Slack::Channel for the channel you specified' do
+      expect(subject.join('#ruby')).to be_an_instance_of(Layabout::Slack::Channel)
     end
   end
 
