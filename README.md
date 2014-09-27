@@ -1,6 +1,7 @@
 # Layabout - Slack API Toolbelt
 
-![travis] (https://travis-ci.org/jamescook/layabout.svg)
+[![Build Status](https://img.shields.io/travis/jamescook/layabout/master.svg?style=flat)](https://travis-ci.org/jamescook/layabout)
+[![Code Climate](https://codeclimate.com/github/jamescook/layabout/badges/gpa.svg?style=flat)](https://codeclimate.com/github/jamescook/layabout)
 
 ### Configuration
 ```
