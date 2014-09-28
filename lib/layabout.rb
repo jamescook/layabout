@@ -1,5 +1,6 @@
 require 'uri'
 require 'httpi'
+require_relative 'layabout/slack_request.rb'
 require_relative 'layabout/slack_response.rb'
 require_relative 'layabout/helpers'
 
@@ -24,6 +25,11 @@ module Layabout
 
     def domain
       URI.parse("https://#{team}.slack.com/")
+    end
+
+    def merge(options={})
+      @token = options[:token] if options.key?(:token)
+      @team  = options[:team]  if options.key?(:team)
     end
   end
 end

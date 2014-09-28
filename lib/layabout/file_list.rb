@@ -1,16 +1,11 @@
-require 'uri'
-require 'httpi'
-require 'forwardable'
 require_relative '../layabout/slack/file.rb'
+require_relative '../layabout/slack_request.rb'
+require_relative '../layabout/slack_response.rb'
 
 module Layabout
   class FileList
-    extend Forwardable
-
-    def_delegators :@configuration, :domain, :team, :token
 
     def initialize(options={})
-      @configuration = ::Layabout.configuration
       @user          = options[:user]
       @ts_from       = options[:ts_from]
       @ts_to         = options[:ts_to]
@@ -20,7 +15,13 @@ module Layabout
     end
 
     def list
-      process 'files', SlackResponse.new(HTTPI.get(http_request(endpoint)))
+      process 'files', SlackResponse.new(request.perform(:get))
+    end
+
+    private
+
+    def request
+      ::Layabout::SlackRequest.new('/api/files.list', build_query)
     end
 
     private
@@ -31,13 +32,6 @@ module Layabout
       return data.map{|json| ::Layabout::Slack::File.new(json) }
     end
 
-    def http_request(endpoint)
-      @http_request ||= HTTPI::Request.new(endpoint.to_s).tap do |httpi|
-        httpi.auth.ssl.verify_mode = :peer
-        httpi.query = build_query.merge('token' => token)
-      end
-    end
-
     def build_query
       {}.tap do |hash|
         hash['user']    = @user     if @user
@@ -46,12 +40,6 @@ module Layabout
         hash['types']   = @types    if @types
         hash['count']   = @count    if @count
         hash['page']    = @page     if @page
-      end
-    end
-
-    def endpoint
-      domain.tap do |uri|
-        uri.path = "/api/files.list"
       end
     end
   end
