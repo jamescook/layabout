@@ -2,12 +2,17 @@ require_relative './chat.rb'
 require_relative './channels.rb'
 require_relative './file_upload.rb'
 require_relative './users.rb'
+require_relative './incoming_webhook.rb'
 
 module Layabout
   module Helpers
     def say(message, channel, options={})
       options = options.dup.merge(text: message, channel: channel)
       Chat.new(options).post_message
+    end
+
+    def say_with_webhook(message, token)
+      IncomingWebhook.new(message: message, token: token).post
     end
 
     def channels(options={})

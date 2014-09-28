@@ -3,8 +3,16 @@ require_relative '../../lib/layabout.rb'
 
 describe Layabout, vcr: true do
   describe '.say' do
-    it 'posts a message' do
-      expect(Layabout.say('hello', 'C026VKGP7')).to be_success
+    context 'with a webhook token' do
+      it 'posts a message' do
+        expect(Layabout.say_with_webhook('hello', '2VyiZrFyVx4maiOvG3uae1RA')).to be_success
+      end
+    end
+
+    context 'using the default chat api' do
+      it 'posts a message' do
+        expect(Layabout.say('hello', 'C026VKGP7')).to be_success
+      end
     end
   end
 
