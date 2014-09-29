@@ -1,5 +1,8 @@
 require_relative './chat.rb'
-require_relative './channels.rb'
+require_relative './channel_list.rb'
+require_relative './channel_info.rb'
+require_relative './channel_join.rb'
+require_relative './channel_leave.rb'
 require_relative './file_upload.rb'
 require_relative './users.rb'
 require_relative './incoming_webhook.rb'
@@ -16,15 +19,19 @@ module Layabout
     end
 
     def channels(options={})
-      Channels.new.list
+      ChannelList.new.list
+    end
+
+    def channel_info(channel_id)
+      ChannelInfo.new(channel_id).info
     end
 
     def join(channel_name)
-      Channels.new.join(channel_name)
+      ChannelJoin.new(channel_name).join
     end
 
     def leave(channel_id)
-      Channels.new.leave(channel_id)
+      ChannelLeave.new(channel_id).leave
     end
 
     def upload(filepath, channels, options={})

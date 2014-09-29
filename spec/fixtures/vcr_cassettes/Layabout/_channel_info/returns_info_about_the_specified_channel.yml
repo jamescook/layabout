@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://isotope11.slack.com/api/channels.info?channel=C029N15A8&token=xoxp-2223009426-2222616703-2700726491-4a3e8d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 25 Sep 2014 12:04:59 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - read
+      X-Oauth-Scopes:
+      - identify,read,post,client
+      X-Xss-Protection:
+      - '0'
+      Content-Length:
+      - '255'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ok":true,"channel":{"id":"C029N15A8","name":"affa_tracker","is_channel":true,"created":1399390760,"creator":"U026LNDQB","is_archived":false,"is_general":false,"is_member":false,"members":["U026K09CL","U026K0CLC","U026K13DU","U026LNDQB"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"To
+        discuss the development of the Affa Tracker app","creator":"U026LNDQB","last_set":"1399390761"}}}'
+    http_version: 
+  recorded_at: Thu, 25 Sep 2014 12:05:03 GMT
+recorded_with: VCR 2.9.3

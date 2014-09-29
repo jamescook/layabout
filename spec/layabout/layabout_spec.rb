@@ -29,6 +29,12 @@ describe Layabout, vcr: true do
     end
   end
 
+  describe '.channel_info' do
+    it 'returns info about the specified channel' do
+      expect(Layabout.channel_info('C029N15A8')).to be_an_instance_of(Layabout::Slack::Channel)
+    end
+  end
+
   describe '.join' do
     it 'joins the specified channel and returns an instance of Channel' do
       expect(Layabout.join('#ruby')).to be_an_instance_of(Layabout::Slack::Channel)
