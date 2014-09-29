@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://isotope11.slack.com/services/hooks/incoming-webhook?token=2VyiZrFyVx4maiOvG3uae1RA
+    uri: https://<%= ENV['SLACK_TEAM'] %>.slack.com/services/hooks/incoming-webhook?token=2VyiZrFyVx4maiOvG3uae1RA
     body:
       encoding: UTF-8
       string: '{"text":"hello"}'

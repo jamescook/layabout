@@ -2,68 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://isotope11.slack.com/api/channels.list?token=xoxp-2223009426-2222616703-2700726491-4a3e8d
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Origin:
-      - "*"
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 26 Sep 2014 12:32:33 GMT
-      Expires:
-      - Mon, 26 Jul 1997 05:00:00 GMT
-      Pragma:
-      - no-cache
-      Server:
-      - Apache
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains
-      Vary:
-      - Accept-Encoding
-      X-Accepted-Oauth-Scopes:
-      - read
-      X-Oauth-Scopes:
-      - identify,read,post,client
-      X-Xss-Protection:
-      - '0'
-      Content-Length:
-      - '1201'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"ok":true,"channels":[{"id":"C029N15A8","name":"affa_tracker","is_channel":true,"created":1399390760,"creator":"U026LNDQB","is_archived":false,"is_general":false,"is_member":false,"members":["U026K09CL","U026K0CLC","U026K13DU","U026LNDQB"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"To
-        discuss the development of the Affa Tracker app","creator":"U026LNDQB","last_set":"1399390761"},"num_members":4},{"id":"C026JMBBH","name":"aiua","is_channel":true,"created":1395068252,"creator":"U026JJ4LP","is_archived":false,"is_general":false,"is_member":false,"members":["U026JJBGB","U026JL37B","U026K09CL","U02K9RJTP"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":4},{"id":"C02HN6TPJ","name":"chromium","is_channel":true,"created":1409343386,"creator":"U026JJ2HH","is_archived":false,"is_general":false,"is_member":false,"members":[],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":0},{"id":"C029H63H1","name":"colon-ade","is_channel":true,"created":1399038936,"creator":"U026K0CLC","is_archived":false,"is_general":false,"is_member":false,"members":["U026K09CL","U026K0CLC","U026LNDQB"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":3},{"id":"C02D52S06","name":"elixir","is_channel":true,"created":1404914328,"creator":"U02CB4HEZ","is_archived":false,"is_general":false,"is_member":false,"members":["U026K09CL","U02CB4HEZ"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"Discuss
-        all things Erlang\/Elixir","creator":"U02CB4HEZ","last_set":"1404914328"},"num_members":2},{"id":"C026K09CQ","name":"general","is_channel":true,"created":1395065128,"creator":"U026K09CL","is_archived":false,"is_general":true,"is_member":true,"members":["U026JJ2HH","U026JJ2UV","U026JJ4LP","U026JJBGB","U026JL37B","U026K09CL","U026K0CLC","U026K13DU","U026LNDQB","U02C6FSCT","U02CB4HEZ","U02HKC6LR","U02K9RJTP"],"topic":{"value":"work-related
-        gifs, and curse words","creator":"U026JL37B","last_set":"1400785091"},"purpose":{"value":"The
-        #general channel is for team-wide communication and announcements. All team
-        members are in this channel.","creator":"","last_set":"0"},"num_members":12},{"id":"C026M741S","name":"jenkins","is_channel":true,"created":1395152901,"creator":"U026JJ4LP","is_archived":true,"is_general":false,"is_member":false,"members":[],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"Build
-        Notifications","creator":"U026JJ4LP","last_set":"1395152901"},"num_members":0},{"id":"C026JJD8R","name":"learningearnings","is_channel":true,"created":1395065397,"creator":"U026JJ2UV","is_archived":false,"is_general":false,"is_member":false,"members":["U026JJ2UV","U026JL37B","U026K09CL","U026K0CLC","U02K9RJTP","U02LYDWK7"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":5},{"id":"C026JJ985","name":"paves","is_channel":true,"created":1395065313,"creator":"U026K09CL","is_archived":false,"is_general":false,"is_member":false,"members":[],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"Discussion
-        around the PAVES app","creator":"U026K09CL","last_set":"1395065313"},"num_members":0},{"id":"C026K09CS","name":"random","is_channel":true,"created":1395065128,"creator":"U026K09CL","is_archived":false,"is_general":false,"is_member":true,"members":["U026JJ2UV","U026JJ4LP","U026JL37B","U026K09CL","U026K0CLC","U026K13DU","U02C6FSCT","U02CB4HEZ","U02HKC6LR","U02K9RJTP"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"A
-        place for non-work banter, links, articles of interest, humor or anything
-        else which you''d like concentrated in some place other than work-related
-        channels.","creator":"","last_set":"0"},"num_members":9},{"id":"C02908AHG","name":"reactjs","is_channel":true,"created":1397765758,"creator":"U026JJ2HH","is_archived":false,"is_general":false,"is_member":false,"members":[],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":0},{"id":"C026VKGP7","name":"ruby","is_channel":true,"created":1395427609,"creator":"U026JJ2HH","is_archived":false,"is_general":false,"is_member":true,"members":["U026JJ4LP"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":1},{"id":"C02C76XRU","name":"shipt","is_channel":true,"created":1403638591,"creator":"U026JJBGB","is_archived":false,"is_general":false,"is_member":true,"members":["U026JJ4LP","U026JJBGB","U026JL37B","U026K09CL","U026K0CLC","U026LNDQB","U02C6FSCT","U02CB4HEZ","U02JX3FAF","U02K9RJTP"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":10},{"id":"C02M1SJHD","name":"solar_universe","is_channel":true,"created":1411691906,"creator":"U026K09CL","is_archived":false,"is_general":false,"is_member":true,"members":["U026JJ4LP","U026K09CL"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":2},{"id":"C029SAZ49","name":"squad","is_channel":true,"created":1399648710,"creator":"U026K0CLC","is_archived":false,"is_general":false,"is_member":false,"members":["U026K09CL","U026K0CLC","U026LNDQB"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":3},{"id":"C0294CFTJ","name":"starcraft","is_channel":true,"created":1398180301,"creator":"U026JL37B","is_archived":false,"is_general":false,"is_member":false,"members":["U026JL37B","U026K09CL","U026K0CLC"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":3},{"id":"C02DUCS9W","name":"uspto","is_channel":true,"created":1405694325,"creator":"U026K09CL","is_archived":false,"is_general":false,"is_member":false,"members":["U026JJ2HH","U026K09CL","U026K0CLC","U02K9RJTP"],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":4},{"id":"C027LH86G","name":"vim","is_channel":true,"created":1396289943,"creator":"U026JJ2HH","is_archived":false,"is_general":false,"is_member":false,"members":[],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":0},{"id":"C028ZJFRX","name":"_freenode","is_channel":true,"created":1397766131,"creator":"U026JJ2HH","is_archived":false,"is_general":false,"is_member":false,"members":[],"topic":{"value":"","creator":"","last_set":"0"},"purpose":{"value":"","creator":"","last_set":"0"},"num_members":0}]}'
-    http_version: 
-  recorded_at: Fri, 26 Sep 2014 12:32:33 GMT
-- request:
-    method: get
-    uri: https://isotope11.slack.com/api/channels.list?token=xoxp-2223009426-2222616703-2700726491-4a3e8d
+    uri: https://<%= ENV['SLACK_TEAM'] %>.slack.com/api/channels.list?token=<%= ENV['SLACK_API_TOKEN'] %>
     body:
       encoding: US-ASCII
       string: ''

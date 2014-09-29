@@ -8,8 +8,11 @@ VCR.configure do |config|
   config.allow_http_connections_when_no_cassette = true
   config.hook_into :webmock
   config.configure_rspec_metadata!
-  config.default_cassette_options = { record: :once }
+  config.default_cassette_options = { record: :once, erb: true }
 end
+
+ENV['SLACK_TEAM'] ||= 'isotope11'
+ENV['SLACK_API_TOKEN'] ||= 'a-totally-legit-token'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -23,9 +26,8 @@ RSpec.configure do |config|
 
   config.before :suite do
     Layabout.configure do |c|
-      c.team  = ENV['SLACK_TEAM'] || "isotope11"
-      # I'll be re-issuing my API token often ...
-      c.token = ENV['SLACK_API_TOKEN'] || "xoxp-2223009426-2222616703-2700726491-4a3e8d"
+      c.team  = ENV['SLACK_TEAM']
+      c.token = ENV['SLACK_API_TOKEN']
     end
   end
 

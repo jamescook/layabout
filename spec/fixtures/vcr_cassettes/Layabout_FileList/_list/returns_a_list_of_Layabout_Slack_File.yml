@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://isotope11.slack.com/api/files.list?count=1&token=xoxp-2223009426-2222616703-2700726491-4a3e8d
+    uri: https://<%= ENV['SLACK_TEAM'] %>.slack.com/api/files.list?count=1&token=<%= ENV['SLACK_API_TOKEN'] %>
     body:
       encoding: US-ASCII
       string: ''
