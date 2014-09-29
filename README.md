@@ -2,6 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/jamescook/layabout/master.svg?style=flat)](https://travis-ci.org/jamescook/layabout)
 [![Code Climate](https://codeclimate.com/github/jamescook/layabout/badges/gpa.svg?style=flat)](https://codeclimate.com/github/jamescook/layabout)
+[![Test Coverage](https://codeclimate.com/github/jamescook/layabout/badges/coverage.svg)](https://codeclimate.com/github/jamescook/layabout)
 [![Gem Version](https://badge.fury.io/rb/layabout.svg)](http://badge.fury.io/rb/layabout)
 
 ### Configuration
