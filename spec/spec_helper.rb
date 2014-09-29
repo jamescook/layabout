@@ -1,3 +1,6 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 require_relative '../lib/layabout.rb'
 require 'pry'
 require 'vcr'
