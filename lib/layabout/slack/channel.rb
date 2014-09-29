@@ -27,6 +27,10 @@ module Layabout
       def inspect
         "<Layabout::Slack::Channel id='#{id}' name='#{name}'>"
       end
+
+      def to_hash
+        @attributes.to_h
+      end
     end
   end
 end

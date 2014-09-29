@@ -14,6 +14,8 @@ end
 ENV['SLACK_TEAM'] ||= 'isotope11'
 ENV['SLACK_API_TOKEN'] ||= 'a-totally-legit-token'
 
+Dir["spec/support/**/*.rb"].each { |f| require_relative "../#{f}" }
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true

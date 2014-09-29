@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+Signal.trap("INT") { exit 1 }
+
+require_relative '../lib/layabout/cli.rb'
+
+Layabout::CLI.new(ARGV).run

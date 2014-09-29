@@ -19,4 +19,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "httpi",               "~> 2.1.1"
   spec.add_dependency "multipart-post",      "~> 1.1.0"
+  spec.executables   = %w(layabout)
 end

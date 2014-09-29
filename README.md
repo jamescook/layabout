@@ -2,6 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/jamescook/layabout/master.svg?style=flat)](https://travis-ci.org/jamescook/layabout)
 [![Code Climate](https://codeclimate.com/github/jamescook/layabout/badges/gpa.svg?style=flat)](https://codeclimate.com/github/jamescook/layabout)
+[![Gem Version](https://badge.fury.io/rb/layabout.svg)](http://badge.fury.io/rb/layabout)
 
 ### Configuration
 ```
@@ -21,4 +22,19 @@ Layabout.leave('C234546')                           # Leave a channel by ID. Cha
 Layabout.upload('/path/to/a/silly.gif', 'C234546')  # You must specify the channel ID ...
 Layabout.channels                                   # Return a list of channels for your team
 Layabout.users                                      # Return a list of users for your team
+```
+
+
+### Command-line usage
+
+```
+  Usage:
+    layabout COMMAND [options...]
+
+  Examples:
+    export SLACK_TEAM=your-slack-team
+    export SLACK_API_TOKEN=your-api-token
+
+    echo 'hello world' | layabout say --channel ruby
+    layabout upload --file /path/to/kitten.gif --channel ruby
 ```
