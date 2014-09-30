@@ -35,7 +35,7 @@ describe Layabout::CLI, vcr: true do
     end
 
     context 'given some text to say in a channel' do
-      subject { described_class.new(['say', '--channel', 'ruby']) }
+      subject { described_class.new(['say', '--channel', 'ruby', '--username', 'Karl Childers']) }
 
       before do
         stdin.puts "hello world"

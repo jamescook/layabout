@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<%= ENV['SLACK_TEAM'] %>.slack.com/api/chat.postMessage?channel=C026VKGP7&text=hello&token=<%= ENV['SLACK_API_TOKEN'] %>
+    uri: https://<%= ENV['SLACK_TEAM'] %>.slack.com/api/chat.postMessage?channel=C026VKGP7&text=hello&token=<%= ENV['SLACK_API_TOKEN'] %>&username=Annoying%20bot
     body:
       encoding: US-ASCII
       string: ''

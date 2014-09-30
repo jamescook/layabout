@@ -11,7 +11,7 @@ describe Layabout, vcr: true do
 
     context 'using the default chat api' do
       it 'posts a message' do
-        expect(Layabout.say('hello', 'C026VKGP7')).to be_success
+        expect(Layabout.say('hello', 'C026VKGP7', username: 'Annoying bot')).to be_success
       end
     end
   end

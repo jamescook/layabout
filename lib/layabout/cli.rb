@@ -27,7 +27,7 @@ module Layabout
         output.puts Layabout::AuthTest.new.get.body
         exit 0
       when 'say' then
-        output.puts Layabout.say(input.read, '#' + read_option('channel')).body
+        output.puts Layabout.say(read_option('message') || input.read, '#' + read_option('channel'), username: read_option('username')).body
         exit 0
       when 'channels' then
         output.puts Layabout.channels.map{|channel| channel.to_hash }
@@ -75,7 +75,7 @@ EOF
 
     def read_option(key)
       idx = options.index("--#{key}")
-      return options[idx+1]
+      return options[idx+1] if idx
     end
   end
 end

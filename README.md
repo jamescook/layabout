@@ -16,8 +16,9 @@ Layabout.configure do |config|
 ### Usage
 
 ```
-Layabout.say('hello world', '#random')              # Posts a message via Chat API
-Layabout.say_with_webhook('howdy', 'special-token')  # Posts a message using a incoming webhook
+Layabout.say('hello world', '#random',
+  username: 'Annoying bot')                         # Posts a message via Chat API as 'Annoying Bot'
+Layabout.say_with_webhook('howdy', 'special-token') # Posts a message using a incoming webhook
 Layabout.join('#random')                            # Join a channel. You may also use a channel ID here
 Layabout.leave('C234546')                           # Leave a channel by ID. Channel name does not work here
 Layabout.upload('/path/to/a/silly.gif', 'C234546')  # Upload a file. You must specify the channel ID ...
@@ -36,6 +37,7 @@ Layabout.users                                      # Return a list of users for
     export SLACK_TEAM=your-slack-team
     export SLACK_API_TOKEN=your-api-token
 
-    echo 'hello world' | layabout say --channel ruby
+    echo 'hello world' | layabout say --channel ruby --username "Karl Childers"
+    layabout say --channel ruby --username "Karl Childers" --message "hello world"
     layabout upload --file /path/to/kitten.gif --channel C234546
 ```
