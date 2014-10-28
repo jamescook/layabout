@@ -24,20 +24,15 @@ module Layabout
         print_help
         exit 0
       when 'auth_test' then
-        output.puts Layabout::AuthTest.new.get.body
-        exit 0
+        write Layabout::AuthTest.new.get.body
       when 'say' then
-        output.puts Layabout.say(read_option('message') || input.read, '#' + read_option('channel'), username: read_option('username')).body
-        exit 0
+        write Layabout.say(read_option('message') || input.read, '#' + read_option('channel'), username: read_option('username')).body
       when 'channels' then
-        output.puts Layabout.channels.map{|channel| channel.to_hash }
-        exit 0
+        write Layabout.channels.map{|channel| channel.to_hash }
       when 'users' then
-        output.puts Layabout.users.map{|user| user.to_hash }
-        exit 0
+        write Layabout.users.map{|user| user.to_hash }
       when 'upload' then
-        output.puts Layabout.upload(read_option('file'), read_option('channel'))
-        exit 0
+        write Layabout.upload(read_option('file'), read_option('channel'))
       else
         print_help
         exit 1
@@ -45,6 +40,11 @@ module Layabout
     end
 
     private
+
+    def write(data, exit_code=0)
+      output.puts(data)
+      exit exit_code
+    end
 
     def print_help
       output.puts <<EOF
